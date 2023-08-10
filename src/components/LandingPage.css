@@ -1,0 +1,40 @@
+/* src/components/LandingPage.css */
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+    /* Adjust the background color */
+}
+
+.logo-container {
+    /* Add styles for the logo container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 500px;
+    /* Adjust the logo size as needed */
+    height: 200px;
+    object-fit: contain;
+    /* Ensure the entire logo fits within the specified dimensions */
+    /* Add other styles for the logo */
+}
+
+.loading-animation {
+    /* Add styles for the loading animation */
+    font-size: 18px;
+    color: #555;
+}
+
+.welcome-message {
+    /* Add styles for the welcome message */
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}

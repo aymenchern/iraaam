@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import LandingPage from './components/LandingPage';
+import StationServiceTable from './components/StationServiceTable';
 
-function App() {
+const App = () => {
+  const [showTables, setShowTables] = useState(false);
+
+  // Function to toggle between the landing page and main page
+  const togglePage = () => {
+    setShowTables(!showTables);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {showTables ? (
+        <StationServiceTable />
+      ) : (
+        <LandingPage togglePage={togglePage} />
+      )}
     </div>
   );
-}
+};
 
 export default App;
